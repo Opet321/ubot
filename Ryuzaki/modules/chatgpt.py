@@ -5,10 +5,11 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 
 from Ryuzaki.modules.help import *
+from config import *
 
 from RyuzakiLib.hackertools.chatgpt import RendyDevChat
 
-@Client.on_message(filters.command(["ai", "ask"]) & filters.me)
+@Client.on_message(filters.command(["ai", "ask"], PREFIXES_CMD) & filters.me)
 async def chatgpt_support(client: Client, message: Message):
     pro = await message.reply_text("`Processing.....`")
     deny_ask_hehe = message.text.split(" ", 1)[1] if len(message.command) > 1 else None
