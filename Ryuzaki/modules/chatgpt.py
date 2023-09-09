@@ -27,3 +27,9 @@ async def chatgpt_support(client: Client, message: Message):
         await pro.edit_text(str(e))
         return
     
+add_command_help(
+    "openai",
+    [
+        ["ai or ask [question]", "To ask questions using the assistant bot"],
+    ],
+)
