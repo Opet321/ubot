@@ -6,7 +6,7 @@ from Ryuzaki import clients
 
 async def start_bot():
     for all_module in ALL_MODULES:
-        importlib.import_module("Ryuzaki.modules" + all_module)
+        importlib.import_module(f"Ryuzaki.modules{all_module}")
         print(f"Successfully Imported {all_module}")
     for pro in clients:
         try:

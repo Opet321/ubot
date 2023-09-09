@@ -34,9 +34,7 @@ async def module_helper(client: Client, message: Message):
         await edit_or_reply(
             message, f"```{str(ac)}```\n• @RendyProjects"
         )
-        await message.reply(
-            f"**Usage**:`.help type` **To View Module details**"
-        )
+        await message.reply("**Usage**:`.help type` **To View Module details**")
 
     if help_arg:
         if help_arg in CMD_HELP:
@@ -56,11 +54,7 @@ async def module_helper(client: Client, message: Message):
 
 
 def add_command_help(module_name, commands):
-    if module_name in CMD_HELP.keys():
-        command_dict = CMD_HELP[module_name]
-    else:
-        command_dict = {}
-
+    command_dict = CMD_HELP[module_name] if module_name in CMD_HELP.keys() else {}
     for x in commands:
         for y in x:
             if y is not x:
