@@ -6,7 +6,6 @@ import pyrogram
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from pymongo import MongoClient
 from pyrogram import Client
 from pyrogram.types import *
 from pyrogram import filters
@@ -20,7 +19,6 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 logging.basicConfig(level=logging.INFO)
 
 LOGS = logging.getLogger(__name__)
-
 
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
