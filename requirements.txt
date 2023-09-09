@@ -4,4 +4,5 @@ tgcrypto
 aiohttp
 aiofiles
 bs4
+uvloop
 python-dotenv
