@@ -31,7 +31,6 @@ logger = logging.getLogger(__name__)
 StartTime = time.time()
 START_TIME = dt.now()
 CMD_HELP = {}
-clients = []
 ids = []
 act = []
 
@@ -43,4 +42,4 @@ client = Client(
     session_string=SESSION_STRING,
     plugins=dict(root="Ryuzaki.modules")
 )
-clients.append(client)
+clients = [client]
