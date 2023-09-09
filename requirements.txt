@@ -1,0 +1,7 @@
+pyrogram
+RyuzakiLib
+tgcrypto
+aiohttp
+aiofiles
+bs4
+python-dotenv
